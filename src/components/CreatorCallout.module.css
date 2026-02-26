@@ -1,0 +1,65 @@
+.section {
+    position: relative;
+    padding: var(--section-padding);
+    overflow: hidden;
+}
+
+.bgGrid {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 4px;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.bgTile {
+    background: linear-gradient(135deg, var(--grey-dark), var(--bg-secondary));
+    border-radius: 8px;
+    animation: tileFlicker 8s ease-in-out infinite alternate;
+}
+
+@keyframes tileFlicker {
+
+    0%,
+    100% {
+        opacity: 0.02;
+    }
+
+    50% {
+        opacity: 0.06;
+    }
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.headline {
+    font-size: clamp(2rem, 4.5vw, 3.2rem);
+    font-weight: 900;
+    margin-bottom: 24px;
+    line-height: 1.1;
+}
+
+.body {
+    font-size: 1.05rem;
+    color: var(--grey-light);
+    line-height: 1.8;
+    margin-bottom: 40px;
+}
+
+.body strong {
+    color: var(--gold);
+    font-weight: 700;
+}
+
+.ctaWrap {
+    text-align: center;
+}

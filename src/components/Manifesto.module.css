@@ -1,0 +1,215 @@
+.section {
+    position: relative;
+    overflow: hidden;
+}
+
+/* ===== Page Hero ===== */
+.pageHero {
+    position: relative;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(ellipse at 50% 50%, rgba(255, 215, 0, 0.06) 0%, transparent 60%),
+        var(--bg-primary);
+    padding: 120px 60px 80px;
+}
+
+.heroOverlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 0%, var(--bg-primary) 100%);
+    z-index: 1;
+}
+
+.heroContent {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.heroHeadline {
+    font-family: var(--font-heading);
+    font-size: clamp(2.4rem, 7vw, 5rem);
+    font-weight: 900;
+    line-height: 1.05;
+    color: var(--white);
+    margin-bottom: 20px;
+}
+
+.heroSub {
+    font-family: var(--font-heading);
+    font-size: clamp(0.9rem, 2vw, 1.2rem);
+    font-weight: 600;
+    color: var(--grey-light);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+/* ===== Content Grid ===== */
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 80px;
+    align-items: center;
+    padding: var(--section-padding);
+}
+
+.textCol {
+    position: relative;
+    z-index: 2;
+}
+
+.headline {
+    font-size: clamp(2rem, 4.5vw, 3.4rem);
+    font-weight: 900;
+    margin-bottom: 32px;
+    line-height: 1.1;
+}
+
+.body {
+    font-size: 1.05rem;
+    color: var(--grey-light);
+    line-height: 1.8;
+    margin-bottom: 20px;
+    max-width: 560px;
+}
+
+/* Soundwave Visual */
+.visualCol {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.soundwave {
+    display: flex;
+    align-items: flex-end;
+    gap: 3px;
+    height: 300px;
+    padding: 20px 0;
+}
+
+.bar {
+    width: 5px;
+    background: linear-gradient(to top, var(--gold), rgba(255, 215, 0, 0.2));
+    border-radius: 3px;
+    animation: pulse 1.8s ease-in-out infinite alternate;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.15);
+}
+
+@keyframes pulse {
+    0% {
+        transform: scaleY(0.7);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: scaleY(1.15);
+        opacity: 1;
+    }
+}
+
+/* Pillars */
+.pillarsHeading {
+    font-family: var(--font-heading);
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    text-align: center;
+    max-width: var(--max-width);
+    margin: 0 auto 40px;
+    padding: 0 60px;
+}
+
+.pillars {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    padding: 0 60px 80px;
+}
+
+.pillar {
+    padding: 40px 32px;
+    background: rgba(255, 215, 0, 0.03);
+    border: 1px solid rgba(255, 215, 0, 0.08);
+    border-radius: 16px;
+    text-align: center;
+    transition: all 0.4s var(--transition-smooth);
+}
+
+.pillar:hover {
+    background: rgba(255, 215, 0, 0.06);
+    border-color: rgba(255, 215, 0, 0.18);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(255, 215, 0, 0.08);
+}
+
+.pillarIcon {
+    font-size: 2.4rem;
+    display: block;
+    margin-bottom: 16px;
+}
+
+.pillarTitle {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 8px;
+}
+
+.pillarDesc {
+    font-size: 0.9rem;
+    color: var(--grey-light);
+    line-height: 1.6;
+}
+
+/* CTA at bottom */
+.ctaWrap {
+    text-align: center;
+    padding: 0 60px 120px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .pageHero {
+        padding: 100px 24px 60px;
+        min-height: 45vh;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .visualCol {
+        order: -1;
+    }
+
+    .soundwave {
+        height: 180px;
+    }
+
+    .pillars {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 24px 60px;
+    }
+
+    .pillarsHeading {
+        padding: 0 24px;
+    }
+
+    .ctaWrap {
+        padding: 0 24px 80px;
+    }
+}

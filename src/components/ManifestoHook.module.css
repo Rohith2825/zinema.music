@@ -1,0 +1,25 @@
+.section {
+    padding: var(--section-padding);
+    position: relative;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.headline {
+    font-size: clamp(2rem, 4.5vw, 3.4rem);
+    font-weight: 900;
+    margin-bottom: 32px;
+    line-height: 1.1;
+}
+
+.body {
+    font-size: 1.05rem;
+    color: var(--grey-light);
+    line-height: 1.8;
+    margin-bottom: 8px;
+}

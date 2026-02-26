@@ -1,0 +1,244 @@
+.footer {
+    position: relative;
+    padding: 80px 60px 0;
+    background: var(--bg-secondary);
+}
+
+.topDivider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, rgba(255, 215, 0, 0.2) 50%, transparent 100%);
+}
+
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr 1fr;
+    gap: 60px;
+    padding-bottom: 60px;
+}
+
+/* Brand */
+.brandCol {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.logo {
+    display: flex;
+    align-items: baseline;
+    gap: 2px;
+    font-family: var(--font-heading);
+    font-weight: 900;
+    font-size: 1.6rem;
+    letter-spacing: 0.08em;
+}
+
+.logoZ {
+    color: var(--gold);
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.logoText {
+    color: var(--white);
+}
+
+.logoMusic {
+    color: var(--grey-light);
+    font-size: 0.6rem;
+    font-weight: 600;
+    letter-spacing: 0.25em;
+    margin-left: 6px;
+    align-self: flex-end;
+    margin-bottom: 3px;
+}
+
+.tagline {
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--grey-mid);
+    letter-spacing: 0.05em;
+}
+
+.socials {
+    display: flex;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.socialIcon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--grey-light);
+    transition: all 0.3s ease;
+}
+
+.socialIcon:hover {
+    background: var(--gold);
+    border-color: var(--gold);
+    color: var(--bg-primary);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px var(--gold-glow);
+}
+
+/* Links Column */
+.linksCol {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.colTitle {
+    font-family: var(--font-heading);
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--white);
+    margin-bottom: 8px;
+}
+
+.footLink {
+    font-size: 0.9rem;
+    color: var(--grey-light);
+    transition: color 0.3s ease;
+}
+
+.footLink:hover {
+    color: var(--gold);
+}
+
+/* Newsletter Column */
+.newsletterCol {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.newsletterDesc {
+    font-size: 0.85rem;
+    color: var(--grey-light);
+    line-height: 1.5;
+}
+
+.newsletterForm {
+    display: flex;
+    gap: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: border-color 0.3s ease;
+}
+
+.newsletterForm:focus-within {
+    border-color: var(--gold);
+    box-shadow: 0 0 0 3px var(--gold-glow);
+}
+
+.newsletterInput {
+    flex: 1;
+    padding: 14px 18px;
+    background: rgba(255, 255, 255, 0.04);
+    border: none;
+    color: var(--white);
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    outline: none;
+}
+
+.newsletterInput::placeholder {
+    color: var(--grey-mid);
+}
+
+.notifyBtn {
+    border-radius: 0 !important;
+    padding: 14px 24px !important;
+    font-size: 0.7rem !important;
+    white-space: nowrap;
+}
+
+.notifyBtn:disabled {
+    background: #10B981;
+    color: var(--white);
+}
+
+/* Legal */
+.legal {
+    padding: 24px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.copyright {
+    font-size: 0.75rem;
+    color: var(--grey-mid);
+}
+
+.legalLinks {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.legalLinks a {
+    font-size: 0.75rem;
+    color: var(--grey-mid);
+    transition: color 0.3s ease;
+}
+
+.legalLinks a:hover {
+    color: var(--gold);
+}
+
+.dot {
+    color: var(--grey-mid);
+    font-size: 0.6rem;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .footer {
+        padding: 60px 24px 0;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .newsletterForm {
+        flex-direction: column;
+        border-radius: 10px;
+    }
+
+    .notifyBtn {
+        border-radius: 0 0 10px 10px !important;
+    }
+
+    .legal {
+        flex-direction: column;
+        text-align: center;
+        gap: 8px;
+    }
+}
