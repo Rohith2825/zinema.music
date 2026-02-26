@@ -4,6 +4,12 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import styles from './Manifesto.module.css';
 
+// Deterministic pseudo-random to avoid SSR/client hydration mismatch
+function seededRandom(seed: number) {
+    const x = Math.sin(seed + 1) * 10000;
+    return x - Math.floor(x);
+}
+
 const fadeUp = {
     hidden: { opacity: 0, y: 40 },
     visible: (i: number) => ({
@@ -123,7 +129,7 @@ export default function Manifesto() {
                                 key={i}
                                 className={styles.bar}
                                 style={{
-                                    height: `${20 + Math.sin(i * 0.5) * 60 + Math.random() * 20}%`,
+                                    height: `${20 + Math.sin(i * 0.5) * 60 + seededRandom(i + 400) * 20}%`,
                                     animationDelay: `${i * 0.08}s`,
                                 }}
                             />

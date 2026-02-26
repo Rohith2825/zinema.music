@@ -4,6 +4,12 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import styles from './CreatorNetwork.module.css';
 
+// Deterministic pseudo-random to avoid SSR/client hydration mismatch
+function seededRandom(seed: number) {
+    const x = Math.sin(seed + 1) * 10000;
+    return x - Math.floor(x);
+}
+
 const fadeUp = {
     hidden: { opacity: 0, y: 40 },
     visible: (i: number) => ({
@@ -76,7 +82,7 @@ export default function CreatorNetwork() {
                         className={styles.bgTile}
                         style={{
                             animationDelay: `${i * 0.3}s`,
-                            opacity: 0.03 + Math.random() * 0.04,
+                            opacity: 0.03 + seededRandom(i + 300) * 0.04,
                         }}
                     />
                 ))}

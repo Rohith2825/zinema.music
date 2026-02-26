@@ -134,7 +134,7 @@
     justify-content: center;
     cursor: pointer;
     transition: transform 0.3s ease;
-    box-shadow: 0 8px 30px rgba(255, 215, 0, 0.3);
+    box-shadow: 0 8px 30px rgba(232, 139, 45, 0.3);
 }
 
 .playBtn:hover {

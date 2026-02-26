@@ -24,9 +24,38 @@ export default function Footer() {
                     {/* Brand Column */}
                     <div className={styles.brandCol}>
                         <Link href="/" className={styles.logo}>
-                            <span className={styles.logoZ}>Z</span>
-                            <span className={styles.logoText}>INEMA</span>
-                            <span className={styles.logoMusic}>MUSIC</span>
+                            <svg
+                                viewBox="0 0 260 80"
+                                className={styles.logoSvg}
+                                aria-label="Zinema Music"
+                            >
+                                <text
+                                    x="0"
+                                    y="52"
+                                    fontFamily="'Montserrat', sans-serif"
+                                    fontWeight="900"
+                                    fontStyle="italic"
+                                    fontSize="56"
+                                    fill="currentColor"
+                                    letterSpacing="-2"
+                                >
+                                    zinema
+                                </text>
+                                <rect x="47" y="5" width="11" height="11" rx="1" fill="var(--accent, #E88B2D)" />
+                                <text
+                                    x="260"
+                                    y="72"
+                                    fontFamily="'Montserrat', sans-serif"
+                                    fontWeight="700"
+                                    fontSize="14"
+                                    fill="currentColor"
+                                    opacity="0.6"
+                                    textAnchor="end"
+                                    letterSpacing="4"
+                                >
+                                    MUSIC
+                                </text>
+                            </svg>
                         </Link>
                         <p className={styles.tagline}>Cinema Scale. Community Soul.</p>
                         <div className={styles.socials}>

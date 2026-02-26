@@ -5,7 +5,7 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    background: radial-gradient(ellipse at 30% 50%, rgba(255, 215, 0, 0.06) 0%, transparent 60%),
+    background: radial-gradient(ellipse at 30% 50%, rgba(232, 139, 45, 0.06) 0%, transparent 60%),
         radial-gradient(ellipse at 70% 80%, rgba(255, 69, 0, 0.04) 0%, transparent 50%),
         var(--bg-primary);
 }
@@ -65,7 +65,7 @@
 
 .waveBar {
     width: 3px;
-    background: linear-gradient(to top, var(--gold), transparent);
+    background: linear-gradient(to top, var(--accent), transparent);
     border-radius: 2px;
     animation: heroPulse 2.4s ease-in-out infinite alternate;
 }
@@ -92,7 +92,7 @@
 
 .particle {
     position: absolute;
-    background: var(--gold);
+    background: var(--accent);
     border-radius: 50%;
     opacity: 0;
     animation: float infinite ease-in-out;
@@ -147,7 +147,7 @@
 }
 
 .goldLine {
-    background: linear-gradient(135deg, var(--gold), #FFA500, var(--gold));
+    background: linear-gradient(135deg, var(--accent), var(--accent-light), var(--accent));
     background-size: 200% 200%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -202,7 +202,7 @@
 .scrollLine {
     width: 1px;
     height: 60px;
-    background: linear-gradient(to bottom, var(--gold), transparent);
+    background: linear-gradient(to bottom, var(--accent), transparent);
     animation: scrollPulse 2s ease-in-out infinite;
 }
 

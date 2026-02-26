@@ -12,7 +12,7 @@
     background: rgba(0, 0, 0, 0.75);
     backdrop-filter: blur(24px);
     -webkit-backdrop-filter: blur(24px);
-    border-bottom: 1px solid rgba(255, 215, 0, 0.08);
+    border-bottom: 1px solid rgba(232, 139, 45, 0.08);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
 }
 
@@ -29,33 +29,19 @@
 /* Logo */
 .logo {
     display: flex;
-    align-items: baseline;
-    gap: 2px;
-    font-family: var(--font-heading);
-    font-weight: 900;
-    font-size: 1.4rem;
-    letter-spacing: 0.08em;
+    align-items: center;
     text-decoration: none;
 }
 
-.logoZ {
-    color: var(--gold);
-    font-size: 1.8rem;
-    line-height: 1;
-}
-
-.logoText {
+.logoSvg {
+    height: 36px;
+    width: auto;
     color: var(--white);
+    transition: opacity 0.3s ease;
 }
 
-.logoMusic {
-    color: var(--grey-light);
-    font-size: 0.6rem;
-    font-weight: 600;
-    letter-spacing: 0.25em;
-    margin-left: 6px;
-    align-self: flex-end;
-    margin-bottom: 2px;
+.logoSvg:hover {
+    opacity: 0.85;
 }
 
 /* Links */

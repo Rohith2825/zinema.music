@@ -4,9 +4,13 @@
 :root {
   --bg-primary: #000000;
   --bg-secondary: #0A0A0A;
-  --gold: #FFD700;
-  --gold-dim: #B8960F;
-  --gold-glow: rgba(255, 215, 0, 0.25);
+  --accent: #E88B2D;
+  --accent-dim: #C06E1A;
+  --accent-glow: rgba(232, 139, 45, 0.25);
+  --accent-light: #F2A54A;
+  --gold: var(--accent);
+  --gold-dim: var(--accent-dim);
+  --gold-glow: var(--accent-glow);
   --white: #FFFFFF;
   --grey-light: #ABABAB;
   --grey-mid: #666666;
@@ -47,7 +51,7 @@ body {
 }
 
 ::selection {
-  background: var(--gold);
+  background: var(--accent);
   color: var(--bg-primary);
 }
 
@@ -61,7 +65,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--gold-dim);
+  background: var(--accent-dim);
   border-radius: 3px;
 }
 
@@ -86,11 +90,11 @@ a {
 
 /* ============ UTILITY CLASSES ============ */
 .gold-text {
-  color: var(--gold);
+  color: var(--accent);
 }
 
 .gold-gradient-text {
-  background: linear-gradient(135deg, var(--gold), #FFA500, var(--gold));
+  background: linear-gradient(135deg, var(--accent), var(--accent-light), var(--accent));
   background-size: 200% 200%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -116,7 +120,7 @@ a {
   font-weight: 700;
   letter-spacing: 0.3em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--accent);
   margin-bottom: 20px;
   display: flex;
   align-items: center;
@@ -128,7 +132,7 @@ a {
   display: inline-block;
   width: 40px;
   height: 2px;
-  background: var(--gold);
+  background: var(--accent);
 }
 
 .section-container {
@@ -143,7 +147,7 @@ a {
   align-items: center;
   justify-content: center;
   padding: 16px 40px;
-  background: var(--gold);
+  background: var(--accent);
   color: var(--bg-primary);
   font-family: var(--font-heading);
   font-size: 0.85rem;
@@ -168,9 +172,9 @@ a {
 }
 
 .btn-gold:hover {
-  background: #ffe44d;
+  background: var(--accent-light);
   transform: translateY(-2px);
-  box-shadow: 0 8px 30px var(--gold-glow);
+  box-shadow: 0 8px 30px var(--accent-glow);
 }
 
 .btn-gold:hover::after {
@@ -209,14 +213,14 @@ a {
   font-family: var(--font-heading);
   font-size: 0.85rem;
   font-weight: 700;
-  color: var(--gold);
+  color: var(--accent);
   letter-spacing: 0.05em;
   transition: all 0.3s ease;
   margin-top: 24px;
 }
 
 .text-link:hover {
-  color: #ffe44d;
+  color: var(--accent-light);
   gap: 14px;
 }
 
@@ -253,15 +257,15 @@ a {
 }
 
 .filter-pill:hover {
-  border-color: var(--gold);
-  color: var(--gold);
-  background: rgba(255, 215, 0, 0.06);
+  border-color: var(--accent);
+  color: var(--accent);
+  background: rgba(232, 139, 45, 0.06);
 }
 
 .filter-pill.active {
-  background: var(--gold);
+  background: var(--accent);
   color: var(--bg-primary);
-  border-color: var(--gold);
+  border-color: var(--accent);
 }
 
 /* ============ FAQ ACCORDION ============ */
@@ -293,12 +297,12 @@ a {
 }
 
 .faq-question:hover {
-  color: var(--gold);
+  color: var(--accent);
 }
 
 .faq-chevron {
   font-size: 1.2rem;
-  color: var(--gold);
+  color: var(--accent);
   transition: transform 0.3s ease;
   flex-shrink: 0;
   margin-left: 16px;

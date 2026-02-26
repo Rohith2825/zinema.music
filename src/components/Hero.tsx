@@ -3,6 +3,12 @@
 import { motion } from 'framer-motion';
 import styles from './Hero.module.css';
 
+// Deterministic pseudo-random to avoid SSR/client hydration mismatch
+function seededRandom(seed: number) {
+    const x = Math.sin(seed + 1) * 10000;
+    return x - Math.floor(x);
+}
+
 export default function Hero() {
     return (
         <section className={styles.hero} id="hero">
@@ -21,12 +27,12 @@ export default function Hero() {
                         key={i}
                         className={styles.particle}
                         style={{
-                            left: `${Math.random() * 100}%`,
-                            top: `${Math.random() * 100}%`,
-                            animationDelay: `${Math.random() * 6}s`,
-                            animationDuration: `${4 + Math.random() * 6}s`,
-                            width: `${2 + Math.random() * 4}px`,
-                            height: `${2 + Math.random() * 4}px`,
+                            left: `${seededRandom(i * 4) * 100}%`,
+                            top: `${seededRandom(i * 4 + 1) * 100}%`,
+                            animationDelay: `${seededRandom(i * 4 + 2) * 6}s`,
+                            animationDuration: `${4 + seededRandom(i * 4 + 3) * 6}s`,
+                            width: `${2 + seededRandom(i * 4 + 10) * 4}px`,
+                            height: `${2 + seededRandom(i * 4 + 11) * 4}px`,
                         }}
                     />
                 ))}
@@ -40,7 +46,7 @@ export default function Hero() {
                         className={styles.waveBar}
                         style={{
                             animationDelay: `${i * 0.06}s`,
-                            height: `${15 + Math.sin(i * 0.4) * 30 + Math.random() * 15}%`,
+                            height: `${15 + Math.sin(i * 0.4) * 30 + seededRandom(i + 100) * 15}%`,
                         }}
                     />
                 ))}

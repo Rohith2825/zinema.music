@@ -10,7 +10,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: radial-gradient(ellipse at 50% 50%, rgba(255, 215, 0, 0.06) 0%, transparent 60%),
+    background: radial-gradient(ellipse at 50% 50%, rgba(232, 139, 45, 0.06) 0%, transparent 60%),
         var(--bg-primary);
     padding: 120px 60px 80px;
 }
@@ -94,10 +94,10 @@
 
 .bar {
     width: 5px;
-    background: linear-gradient(to top, var(--gold), rgba(255, 215, 0, 0.2));
+    background: linear-gradient(to top, var(--accent), rgba(232, 139, 45, 0.2));
     border-radius: 3px;
     animation: pulse 1.8s ease-in-out infinite alternate;
-    box-shadow: 0 0 10px rgba(255, 215, 0, 0.15);
+    box-shadow: 0 0 10px rgba(232, 139, 45, 0.15);
 }
 
 @keyframes pulse {
@@ -137,18 +137,18 @@
 
 .pillar {
     padding: 40px 32px;
-    background: rgba(255, 215, 0, 0.03);
-    border: 1px solid rgba(255, 215, 0, 0.08);
+    background: rgba(232, 139, 45, 0.03);
+    border: 1px solid rgba(232, 139, 45, 0.08);
     border-radius: 16px;
     text-align: center;
     transition: all 0.4s var(--transition-smooth);
 }
 
 .pillar:hover {
-    background: rgba(255, 215, 0, 0.06);
-    border-color: rgba(255, 215, 0, 0.18);
+    background: rgba(232, 139, 45, 0.06);
+    border-color: rgba(232, 139, 45, 0.18);
     transform: translateY(-4px);
-    box-shadow: 0 12px 40px rgba(255, 215, 0, 0.08);
+    box-shadow: 0 12px 40px rgba(232, 139, 45, 0.08);
 }
 
 .pillarIcon {
